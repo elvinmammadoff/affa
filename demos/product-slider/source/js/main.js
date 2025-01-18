@@ -40,7 +40,7 @@ Exclusively available here: https://themeforest.net/user/peachline
     var slider = new Swiper(".slider-active .swiper-container", {
       speed: 600,
       effect: "fade",
-      loop: true,
+      loop: false,
       pagination: {
           el: ".slider-active .swiper-pagination",
           clickable: true,
@@ -49,9 +49,9 @@ Exclusively available here: https://themeforest.net/user/peachline
           nextEl: ".slider-active .swiper-button-next",
           prevEl: ".slider-active .swiper-button-prev",
       },
-      autoplay: {
-          delay: 6000,
-      },
+      // autoplay: {
+      //     delay: 8000,
+      // },
   })
 
 
