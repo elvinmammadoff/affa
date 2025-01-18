@@ -105,30 +105,12 @@ h1 {
   font-size: 36px
 }
 
-@media only screen and (max-width: 767px) {
-  h1 {
-      font-size:30px
-  }
-}
-
 h2 {
   font-size: 30px
 }
 
-@media only screen and (max-width: 767px) {
-  h2 {
-      font-size:24px
-  }
-}
-
 h3 {
   font-size: 24px
-}
-
-@media only screen and (max-width: 767px) {
-  h3 {
-      font-size:20px
-  }
 }
 
 h4 {
@@ -205,12 +187,6 @@ img {
 
 .main-wrapper {
   overflow-x: hidden
-}
-
-@media only screen and (min-width: 1200px) {
-  .container {
-      max-width:1200px
-  }
 }
 
 .swiper-arrows {
@@ -295,14 +271,6 @@ img {
   transition: all .3s linear
 }
 
-@media only screen and (max-width: 575px) {
-  .pagination .page-item .page-link {
-      width:30px;
-      height: 30px;
-      line-height: 30px
-  }
-}
-
 .pagination .page-item .page-link:hover,.pagination .page-item .page-link.active {
   background-color: #f2a100;
   color: #fff
@@ -365,22 +333,6 @@ img {
 .btn:focus,.btn:active:focus {
   -webkit-box-shadow: none;
   box-shadow: none
-}
-
-@media only screen and (min-width: 992px)and (max-width: 1199px),only screen and (min-width: 768px)and (max-width: 991px) {
-  .btn {
-      height:50px;
-      line-height: 50px;
-      padding: 0px 30px
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .btn {
-      height:45px;
-      line-height: 45px;
-      padding: 0px 20px
-  }
 }
 
 .btn:hover::before {
@@ -646,11 +598,13 @@ img {
 }
 
 .slider-active .swiper-pagination {
-  bottom: 50%;
+  bottom: 0;
+  top: 0;
   left: auto;
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  justify-content: center;
+  gap: 20px;
   width: auto;
   right: 80px;
 }
