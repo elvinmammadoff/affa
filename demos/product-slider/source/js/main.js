@@ -1,12 +1,11 @@
 /* ----------------------------------
 
 Name: main.js
-Author: Peachline
-Website: https://www.viana-beauty.com
-Exclusively available here: https://themeforest.net/user/peachline
+Author: Alissio
+Website: https://www.affa-slider.com
+Exclusively available here: https://themeforest.net/user/alissio
 
 ------------------------------------- */
-
 
 
 
@@ -20,7 +19,6 @@ Exclusively available here: https://themeforest.net/user/peachline
 
       + Synchronize Control Image and Quote Sliders
       + Stop on Hover Image Slider
-
 
 
 	
@@ -49,9 +47,9 @@ Exclusively available here: https://themeforest.net/user/peachline
           nextEl: ".slider-active .swiper-button-next",
           prevEl: ".slider-active .swiper-button-prev",
       },
-      // autoplay: {
-      //     delay: 8000,
-      // },
+      autoplay: {
+          delay: 6000,
+      },
   })
 
 
