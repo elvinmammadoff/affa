@@ -399,12 +399,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+.relative {
+  position: relative;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
 /* hero slider style start  */
 .hero-slider .swiper-pagination {
   bottom: 10px;
   left: 0;
   width: 100%;
-  margin-bottom: 0;
+  margin-bottom: 1.25rem;
 }
 .hero-slider .swiper-pagination-bullet {
   position: relative;
@@ -460,9 +468,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 .hero-slider .swiper-slide {
-  padding: 5rem 6rem;
-  height: 100vh;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   background-color: #faf1ef;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .hero-slider .swiper-slide-active .hero-slider-content > * {
   -webkit-animation: fadeInLeft 1.3s ease-in-out;
@@ -494,38 +507,40 @@ Ensure the default browser behavior of the `hidden` attribute.
   animation: fadeInRight 1.3s ease-in-out;
   transition-delay: 1000ms;
 }
-.hero-slider-content {
-  max-width: 650px;
+.hero-slider-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
 }
 .hero-slider-tag {
   font-size: 24px;
   color: #fc6539;
-  font-weight: normal;
+  font-weight: 400;
   display: block;
   margin-bottom: 0.75rem;
 }
 .hero-slider-title {
-  font-size: 6rem;
-  line-height: 1;
   color: #06264b;
   font-weight: 700;
   font-family: Playfair Display, serif;
   margin-bottom: 1.25rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 .hero-slider-subtitle {
-  font-size: 20px;
   line-height: 2;
   color: #06264b;
   font-weight: 400;
   font-family: Poppins, serif;
+  font-size: 14px;
 }
 .hero-slider-action {
   display: inline-block;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 .hero-slider-btn {
-  padding: 1.25rem 2.5rem;
-  font-size: 20px;  
   color: #fc6539;
   background-color: #06264b;
   border-radius: 9999px;
@@ -535,13 +550,110 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 500;
   text-transform: capitalize;
   line-height: 1.5;
-  column-gap: 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  column-gap: 0.75rem;
 }
 .hero-slider-img {
-  max-width: 100%;
+  margin-top: 2.5rem;
+}
+.hero-slider-img img {
   margin-left: auto;
-    margin-right: auto;
-    height: auto;
+  margin-right: auto;
 }
 
 /* hero slider style end  */
+
+@media (min-width: 576px) {
+  .hero-slider-title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  .hero-slider-img img {
+    max-width: 24rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-slider .swiper-slide {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  .hero-slider-row {
+    flex-direction: row;
+  }
+  .hero-slider-btn {
+    padding-left: 1rem;
+    padding-right: 1rem;  
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .hero-slider-img {
+    margin-top: 0;
+  }
+  .hero-slider .swiper-pagination {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-slider .swiper-slide {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 700px;
+  }
+  .hero-slider-title {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  .hero-slider-subtitle {
+    font-size: 20px;
+  }
+  .hero-slider-action {
+    margin-top: 3rem;
+  }
+  .hero-slider-btn {
+    font-size: 20px;  
+  }
+  .hero-slider-img img {
+    max-width: 32rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-slider-content {
+    max-width: 620px;
+  }
+  .hero-slider-title {
+    display: block;
+    font-size: 6rem;
+    line-height: 1;
+  }
+  .hero-slider-btn {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    column-gap: 1.25rem;
+  }
+  .hero-slider-img img {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1536px) {
+  .hero-slider .swiper-slide {
+    padding-left: 6rem;
+    padding-right: 6rem;
+    height: 100vh;
+  }
+  .hero-slider-content {
+    max-width: 650px;
+  }
+  .hero-slider-title {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
