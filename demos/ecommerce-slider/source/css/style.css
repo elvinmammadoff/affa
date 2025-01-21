@@ -535,9 +535,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 500;
   text-transform: capitalize;
   line-height: 1.5;
-}
-.hero-slider-btn__icon {
-  margin-left: 1.25rem;
+  column-gap: 1.25rem;
 }
 .hero-slider-img {
   max-width: 100%;
