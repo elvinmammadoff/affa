@@ -36,34 +36,29 @@ Exclusively available here: https://themeforest.net/user/peachline
 ========================*/
 
 
-/* Fade Carousel 
--------------------------*/
-var slider = new Swiper ('.gallery-slider', {
-  slidesPerView: 1,
-  effect: "fade",
-  loop: true,
-  speed: 2000,
-  autoplay: {
-    delay: 3000,
-  },
-  centeredSlides: true,
-  disableOnInteraction: false,
-  slideToClickedSlide: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  onmouseover: {
-    autoplay: false
-  },
-});
+/*-----------------------------------
+  # hero-slider
+  ------------------------------ */
 
-// Stop on Hover
-$('.gallery-slider .swiper-slide').hover(function(){
-slider.autoplay.stop();
-}, function(){
-slider.autoplay.start();
-});
+  var heroSlider = new Swiper(".hero-slider .swiper-container", {
+    loop: true,
+    speed: 600,
+    autoplay: false,
+    lazy: true,
+    fadeEffect: {
+      crossFade: true,
+    },
+    pagination: {
+      el: ".hero-slider .swiper-pagination",
+      clickable: true,
+    },
+
+    // navigation: {
+    //   nextEl: ".hero-slider .swiper-button-next",
+    //   prevEl: ".hero-slider .swiper-button-prev",
+    // },
+    navigation: false
+  });
 
 
 
