@@ -1,9 +1,9 @@
 /* ----------------------------------
 
 Name: main.js
-Author: Peachline
-Website: https://www.viana-beauty.com
-Exclusively available here: https://themeforest.net/user/peachline
+Author: Alissio
+Website: https://www.affa-slider.com
+Exclusively available here: https://themeforest.net/user/alissio
 
 ------------------------------------- */
 
@@ -16,11 +16,7 @@ Exclusively available here: https://themeforest.net/user/peachline
 
 	Table of Contents
 
-		01. Gallery Slider
-
-			+ Fade Carousel
-			+ Thumb Slider
-      + Control Fade and Thumb Sliders
+		01. Hero Slider
 
 
 
@@ -31,19 +27,16 @@ Exclusively available here: https://themeforest.net/user/peachline
 
 /*======================
 
-	01. Gallery Slider 
+	01. Hero Slider 
 
 ========================*/
-
-
-/*-----------------------------------
-  # hero-slider
-  ------------------------------ */
 
   var heroSlider = new Swiper(".hero-slider .swiper-container", {
     loop: true,
     speed: 600,
-    autoplay: false,
+    autoplay: {
+      delay: 6000,
+    },
     lazy: true,
     fadeEffect: {
       crossFade: true,
@@ -52,7 +45,6 @@ Exclusively available here: https://themeforest.net/user/peachline
       el: ".hero-slider .swiper-pagination",
       clickable: true,
     },
-
     // navigation: {
     //   nextEl: ".hero-slider .swiper-button-next",
     //   prevEl: ".hero-slider .swiper-button-prev",

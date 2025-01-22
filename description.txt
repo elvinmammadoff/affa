@@ -1,10 +1,10 @@
-<div class="user-html user-html__with-lazy-load"><h3 id="item-description__viana-beauty-slider-template">Viana Beauty – Slider Template</h3>
-<p><strong>Viana Beauty</strong> Slider is an all-in-one package that includes unique style and functionality. It provides you customizable sliders to help create dynamic and engaging web pages. <br><br>With <strong>Viana Beauty</strong> Slider you can quickly and easily add stunning slider to your website. It is easy to use, fully responsive and works seamlessly across all devices.<br><br>Choose from a variety of transition effects, control animations and customize everything from colors to fonts to create the perfect slider for your website.<br><br>Get <strong>Viana Beauty</strong> Slider and take your website to the next level.</p>
+<div class="user-html user-html__with-lazy-load"><h3 id="item-description__affa-slider-template">Affa – Slider Template</h3>
+<p><strong>Affa</strong> Slider is an all-in-one package that includes unique style and functionality. It provides you customizable sliders to help create dynamic and engaging web pages. <br><br>With <strong>Affa</strong> Slider you can quickly and easily add stunning slider to your website. It is easy to use, fully responsive and works seamlessly across all devices.<br><br>Choose from a variety of transition effects, control animations and customize everything from colors to fonts to create the perfect slider for your website.<br><br>Get <strong>Affa</strong> Slider and take your website to the next level.</p>
 
 	<p><img src="https://camo.envatousercontent.com/13c69604a1f8772ac8a5115501e313127e4645a8/68747470733a2f2f6573736f2d736c696465722e6e65746c6966792e6170702f7372632f696d672f726174652e706e67" alt="rate-us"></p>
 
 
-<h3 id="item-description__why-choose-viana-beauty-slider">Why choose Viana Beauty Slider?</h3>
+<h3 id="item-description__why-choose-affa-slider">Why choose Affa Slider?</h3>
 <ul>
 <li>
 <strong>Completely Responsive Design</strong>
@@ -60,13 +60,11 @@
 <li>
 <a href="https://swiperjs.com/" rel="nofollow">Swiper 4.4.1</a> – is a free, modern JavaScript library for building touch sliders (Carousels) with hardware transitions and amazing native behaviors.
 </li>
-<li>
-<a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" rel="nofollow">Bootstrap 5.3.3</a> – is the free source code and released under the MIT license and is copyright 2024.
-</li>
 </ul>
 <h3 id="item-description__fonts-used">Fonts used:</h3>
 <ul>
-<li><a href="https://fonts.google.com/specimen/Open+Sans" rel="nofollow">Open Sans</a></li>
+<li><a href="https://fonts.google.com/specimen/Open+Sans" rel="nofollow">Open Sans</a></li>,
+<li><a href="https://fonts.google.com/specimen/Rubik" rel="nofollow">Rubik</a></li>,
 </ul>
 <h3 id="item-description__images-license">Images License:</h3><p>Thank you so much to the artists and authors who gave their permission to use their amazing works! <strong>THANK YOU!</strong></p>
 <ul>
@@ -74,7 +72,7 @@
 </li>
 </ul>
 <h3 id="item-description__documentation">Documentation</h3>
-<a href="https://viana-beauty.netlify.app/documentation/" rel="nofollow">Check the docs here</a>
+<a href="https://affa-slider.netlify.app/documentation/" rel="nofollow">Check the docs here</a>
 <h3 id="item-description__customization-services">Important Note:</h3>
 <ul>
 <li>All images are just used for Preview Purpose Only. They are not part of the HTML templates and are not included in the final purchase files.</li>
@@ -83,13 +81,13 @@
 <li>Included a documentation file for full instruction.</li>
 </ul>
 <h3 id="item-description__sources-and-credits">Sources and Credits</h3>
-<p><strong>Please note: the images that can be seen in the preview will not be included in the download package. These are for preview purposes only.</strong> Full credits list you can see on this page <a href="https://viana-beauty.netlify.app/documentation/index.html#credits" rel="nofollow">link</a></p>
+<p><strong>Please note: the images that can be seen in the preview will not be included in the download package. These are for preview purposes only.</strong> Full credits list you can see on this page <a href="https://affa-slider.netlify.app/documentation/index.html#credits" rel="nofollow">link</a></p>
 <h3 id="item-description__thank-you">Thank you:</h3><p>Thank you so much for using this template. Your comments and ratings would be much appreciated. Please don’t forget RATE for us.</p><p>If you purchase this template, you will get support. We will update this template time by time and we want to hear your wishes for the future updates or for complete new templates.
 </p><p>We are grateful to you.
-</p><p><strong>– Peachline –</strong></p>
+</p><p><strong>– Alissio –</strong></p>
 
 <h3 id="item-description__change-log">Change Log:</h3>
-<p>V. 1.0.0 – 14.01.2025</p>
+<p>V. 1.0.0 – 22.01.2025</p>
 <pre>- Initial release</pre>
 <p>If you love our product, Don’t forget to rate it 5 stars</p>
 <p>

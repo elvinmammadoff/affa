@@ -1,15 +1,46 @@
-/*-----------------------------------------------------------------------------------
+/* ----------------------------------
 
-    Template Name: Sinp- Single Product Ecommerce HTML Template
-    Version: 1.0
+Name: style.css
+Author: Alissio
+Website: https://www.affa-slider.com
+Exclusively available here: https://themeforest.net/user/alissio
 
------------------------------------------------------------------------------------*/
-/*! tailwindcss v3.0.1 | MIT License | https://tailwindcss.com*/
-/*
-1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
-2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
-*/
+------------------------------------- */
 
+
+
+
+
+/*====================================================
+
+
+	Table of Contents
+	
+	
+
+		01. Generel Styles
+
+			+ Generate Google Fonts 
+			+ Essentials
+
+		02. Hero Slider
+
+
+
+	
+====================================================*/
+
+
+
+/*======================
+
+	01. Generel Styles 
+
+========================*/
+
+
+/* Generate Google Fonts 
+-------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
@@ -30,6 +61,11 @@
 ::after {
   --tw-content: "";
 }
+
+
+
+/* Essentials
+-------------------------*/
 
 /*
 1. Use a consistent sensible line-height in all browsers.
@@ -407,6 +443,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   overflow: hidden;
 }
 
+
+
+
+/*======================
+
+	02. Hero Slider
+
+========================*/
+
 /* hero slider style start  */
 .hero-slider .swiper-pagination {
   bottom: 10px;
@@ -446,61 +491,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(252 101 57/var(--tw-bg-opacity));
 }
-
-@-webkit-keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translate3d(-100px, 0, 0);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translate3d(-100px, 0, 0);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
 .hero-slider .swiper-slide {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
   background-color: #faf1ef;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+          align-items: center;
 }
 .hero-slider .swiper-slide-active .hero-slider-content > * {
   -webkit-animation: fadeInLeft 1.3s ease-in-out;
   animation: fadeInLeft 1.3s ease-in-out;
-}
-
-@-webkit-keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translate3d(100px, 0, 0);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translate3d(100px, 0, 0);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
 }
 .hero-slider .swiper-slide-active img {
   -webkit-animation: fadeInRight 1.3s ease-in-out;
@@ -508,10 +516,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-delay: 1000ms;
 }
 .hero-slider-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
 }
 .hero-slider-tag {
@@ -544,9 +561,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: #fc6539;
   background-color: #06264b;
   border-radius: 9999px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+          align-items: center;
   font-weight: 500;
   text-transform: capitalize;
   line-height: 1.5;
@@ -565,95 +587,3 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 /* hero slider style end  */
-
-@media (min-width: 576px) {
-  .hero-slider-title {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-  .hero-slider-img img {
-    max-width: 24rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .hero-slider .swiper-slide {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-  .hero-slider-row {
-    flex-direction: row;
-  }
-  .hero-slider-btn {
-    padding-left: 1rem;
-    padding-right: 1rem;  
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-  .hero-slider-img {
-    margin-top: 0;
-  }
-  .hero-slider .swiper-pagination {
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width: 992px) {
-  .hero-slider .swiper-slide {
-    padding-top: 0px;
-    padding-bottom: 0px;
-    height: 700px;
-  }
-  .hero-slider-title {
-    font-size: 3rem;
-    line-height: 1;
-  }
-  .hero-slider-subtitle {
-    font-size: 20px;
-  }
-  .hero-slider-action {
-    margin-top: 3rem;
-  }
-  .hero-slider-btn {
-    font-size: 20px;  
-  }
-  .hero-slider-img img {
-    max-width: 32rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .hero-slider-content {
-    max-width: 620px;
-  }
-  .hero-slider-title {
-    display: block;
-    font-size: 6rem;
-    line-height: 1;
-  }
-  .hero-slider-btn {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-    column-gap: 1.25rem;
-  }
-  .hero-slider-img img {
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 1536px) {
-  .hero-slider .swiper-slide {
-    padding-left: 6rem;
-    padding-right: 6rem;
-    height: 100vh;
-  }
-  .hero-slider-content {
-    max-width: 650px;
-  }
-  .hero-slider-title {
-    font-size: 6rem;
-    line-height: 1;
-  }
-}

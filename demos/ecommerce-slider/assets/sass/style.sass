@@ -1,11 +1,9 @@
-@charset "utf-8"
-
 /* ----------------------------------
  *
  *Name: style.css
- *Author: Peachline
- *Website: https://www.viana-beauty.com
- *Exclusively available here: https://themeforest.net/user/peachline
+ *Author: Alissio
+ *Website: https://www.affa-slider.com
+ *Exclusively available here: https://themeforest.net/user/alissio
  *
  *-------------------------------------
 
@@ -19,16 +17,9 @@
  *		01. Generel Styles
  *
  *			+ Generate Google Fonts 
- *			+ Responsive
  *			+ Essentials
  *
- *		02. Gallery Slider
- *
- *			+ Fade Carousel
- *
- *		03. Swiper Slider
- *
- *			+ Navigation
+ *		02. Hero Slider
  *
  *
  *
@@ -43,200 +34,516 @@
 
 /* Generate Google Fonts 
  *-------------------------
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap')
 
+*, ::before, ::after
+  box-sizing: border-box
 
-/* Responsive
--------------------------*/
+  /* 1
+  border-width: 0
 
-@import "responsive"
+  /* 2
+  border-style: solid
 
+  /* 2
+  border-color: currentColor
+
+  /* 2
+
+\::before, ::after
+  --tw-content:""
 
 /* Essentials
  *-------------------------
 
-\:root
-  --primary: #A58E67
-  --secondary: #618252
-  --secondary_90: rgba(97, 130, 82, .9)
-  --primaryLight: #D6C390
-  --white: #fff
-  --gray: #ccc
-  --mainFont: 'Open Sans', serif
+/*
+ *1. Use a consistent sensible line-height in all browsers.
+ *2. Prevent adjustments of font size after orientation changes in iOS.
+ *3. Use a more readable tab size.
+ *4. Use the user's configured `sans` font-family by default.
+
+html
+  line-height: 1.5
+
+  /* 1
+  -webkit-text-size-adjust: 100%
+
+  /* 2
+  -moz-tab-size: 4
+
+  /* 3
+  -o-tab-size: 4
+  tab-size: 4
+
+  /* 3
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+
+  /* 4
+
+/*
+ *1. Remove the margin in all browsers.
+ *2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
 
 body
   margin: 0
-  font-family: var(--mainFont)
 
-/*======================
- *
- *	02. Gallery Slider
- *
- *========================
+  /* 1
+  line-height: inherit
 
-.gallery
-  width: 100%
-  height: 100%
+  /* 2
+
+/*
+ *1. Add the correct height in Firefox.
+ *2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+ *3. Ensure horizontal rules are visible by default.
+
+hr
+  height: 0
+
+  /* 1
+  color: inherit
+
+  /* 2
+  border-top-width: 1px
+
+  /* 3
+
+/*
+ *Add the correct text decoration in Chrome, Edge, and Safari.
+
+abbr[title]
+  -webkit-text-decoration: underline dotted
+  text-decoration: underline dotted
+
+/*
+ *Remove the default font size and weight for headings.
+
+h1, h2, h3, h4, h5, h6
+  font-size: inherit
+  font-weight: inherit
+
+/*
+ *Reset links to optimize for opt-in styling instead of opt-out.
+
+a
+  color: inherit
+  text-decoration: inherit
+
+/*
+ *Add the correct font weight in Edge and Safari.
+
+b, strong
+  font-weight: bolder
+
+/*
+ *1. Use the user's configured `mono` font family by default.
+ *2. Correct the odd `em` font sizing in all browsers.
+
+code, kbd, samp, pre
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+
+  /* 1
+  font-size: 1em
+
+  /* 2
+
+/*
+ *Add the correct font size in all browsers.
+
+small
+  font-size: 80%
+
+/*
+ *Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+
+sub, sup
+  font-size: 75%
+  line-height: 0
   position: relative
+  vertical-align: baseline
 
-/* Fade Carousel 
- *-------------------------
+sub
+  bottom: -0.25em
 
-.gallery-slider
-  width: 100%
-  height: 100dvh
+sup
+  top: -0.5em
 
-  .swiper-slide
-    position: relative
-    overflow: hidden
+/*
+ *1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+ *2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+ *3. Remove gaps between table borders by default.
 
-  .swiper-slide .swiper-caption__content
-    -webkit-transform: translate3d(-55px, 0, 0)
-            transform: translate3d(-55px, 0, 0)
-    opacity: 0
-    -webkit-transition: all 0.7s ease-out
-    -o-transition: all 0.7s ease-out
-    transition: all 0.7s ease-out
+table
+  text-indent: 0
 
-  .swiper-slide-active .swiper-caption__content, .swiper-slide-duplicate-active .swiper-caption__content
-    opacity: 1
-    -webkit-transform: none
-        -ms-transform: none
-            transform: none
+  /* 1
+  border-color: inherit
 
-  .swiper-slide .swiper-caption__img
-    -webkit-transform: translate3d(55px, 0, 0)
-            transform: translate3d(55px, 0, 0)
-    opacity: 0
-    -webkit-transition: all 0.7s ease-out
-    -o-transition: all 0.7s ease-out
-    transition: all 0.7s ease-out
+  /* 2
+  border-collapse: collapse
 
-  .swiper-slide-active .swiper-caption__img, .swiper-slide-duplicate-active .swiper-caption__img
-    opacity: 1
-    -webkit-transform: none
-        -ms-transform: none
-            transform: none
+  /* 3
 
-  .gallery-slider .swiper-slide img
-    height: 100%
+/*
+ *1. Change the font styles in all browsers.
+ *2. Remove the margin in Firefox and Safari.
+ *3. Remove default padding in all browsers.
 
-/*======================
- *
- *	03. Swiper Slider 
- *
- *========================
+button, input, optgroup, select, textarea
+  font-family: inherit
 
-.swiper-slide-shadow-left, .swiper-slide-shadow-right
-  display: none
+  /* 1
+  font-size: 100%
 
-.swiper-caption
-  position: absolute
-  bottom: 86px
-  left: 25%
-  margin-bottom: 40px
-  z-index: 1
-  display: -webkit-box
-  display: -ms-flexbox
-  display: flex
-  -webkit-box-align: end
-      -ms-flex-align: end
-          align-items: flex-end
-  -webkit-box-pack: center
-      -ms-flex-pack: center
-          justify-content: center
-  height: 100%
+  /* 1
+  line-height: inherit
 
-.swiper-caption__img 
-  width: 60%
-  margin-right: 0
-  margin-left: auto
-  height: 100%
-  text-align: right
+  /* 1
+  color: inherit
 
-.swiper-caption__content
-  padding: 49px 80px 49px 54px
-  max-width: 564px
-  -webkit-box-flex: 1
-      -ms-flex: 1
-          flex: 1
-  background-color: var(--secondary)
-  opacity: 0
-  -webkit-transition: all 0.7s ease-out
-  -o-transition: all 0.7s ease-out
-  transition: all 0.7s ease-out
+  /* 1
+  margin: 0
 
-.swiper-slide-active .swiper-caption__content 
+  /* 2
+  padding: 0
+
+  /* 3
+
+/*
+ *Remove the inheritance of text transform in Edge and Firefox.
+
+button, select
+  text-transform: none
+
+/*
+ *1. Correct the inability to style clickable types in iOS and Safari.
+ *2. Remove default button styles.
+
+button, [type=button], [type=reset], [type=submit]
+  -webkit-appearance: button
+
+  /* 1
+  background-color: transparent
+
+  /* 2
+  background-image: none
+
+  /* 2
+
+/*
+ *Use the modern Firefox focus style for all focusable elements.
+
+\:-moz-focusring
+  outline: auto
+
+/*
+ *Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+
+\:-moz-ui-invalid
+  box-shadow: none
+
+/*
+ *Add the correct vertical alignment in Chrome and Firefox.
+
+progress
+  vertical-align: baseline
+
+/*
+ *Correct the cursor style of increment and decrement buttons in Safari.
+
+\::-webkit-inner-spin-button, ::-webkit-outer-spin-button
+  height: auto
+
+/*
+ *1. Correct the odd appearance in Chrome and Safari.
+ *2. Correct the outline style in Safari.
+
+[type=search]
+  -webkit-appearance: textfield
+
+  /* 1
+  outline-offset: -2px
+
+  /* 2
+
+/*
+ *Remove the inner padding in Chrome and Safari on macOS.
+
+\::-webkit-search-decoration
+  -webkit-appearance: none
+
+/*
+ *1. Correct the inability to style clickable types in iOS and Safari.
+ *2. Change font properties to `inherit` in Safari.
+
+\::-webkit-file-upload-button
+  -webkit-appearance: button
+
+  /* 1
+  font: inherit
+
+  /* 2
+
+/*
+ *Add the correct display in Chrome and Safari.
+
+summary
+  display: list-item
+
+/*
+ *Removes the default spacing and border for appropriate elements.
+
+blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre
+  margin: 0
+
+fieldset
+  margin: 0
+  padding: 0
+
+legend
+  padding: 0
+
+ol, ul, menu
+  list-style: none
+  margin: 0
+  padding: 0
+
+/*
+ *Prevent resizing textareas horizontally by default.
+
+textarea
+  resize: vertical
+
+/*
+ *1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+ *2. Set the default placeholder color to the user's configured gray 400 color.
+
+input::-moz-placeholder, textarea::-moz-placeholder, input:-ms-input-placeholder, textarea:-ms-input-placeholder, input::placeholder, textarea::placeholder
   opacity: 1
 
-.swiper-caption__text 
+  /* 1
+  color: #f8f8f8
+
+  /* 2
+
+/*
+ *Set the default cursor for buttons.
+
+button, [role=button]
+  cursor: pointer
+
+/*
+ *Make sure disabled buttons don't get the pointer cursor.
+
+\:disabled
+  cursor: default
+
+/*
+ *1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+ *2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+ *   This can trigger a poorly considered lint error in some tools but is included by design.
+
+img, svg, video, canvas, audio, iframe, embed, object
   display: block
-  font-size: 25px
-  font-weight: normal
-  font-family: var(--mainFont)
-  color: var(--white)
 
-.swiper-caption__ttl 
-  font-size: 45px
-  margin-bottom: 28px
-  font-weight: bold
-	color: var(--white)
-  font-family: var(--mainFont)
+  /* 1
+  vertical-align: middle
 
+  /* 2
 
-/* Navigation
- *-------------------------
+/*
+ *Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
 
-.slider-navigation
-  .slider-arrow
+img, video
+  max-width: 100%
+  height: auto
+
+/*
+ *Ensure the default browser behavior of the `hidden` attribute.
+
+[hidden]
+  display: none
+
+.relative
+  position: relative
+
+.overflow-hidden
+  overflow: hidden
+
+/*======================
+ *
+ *	02. Hero Slider
+ *
+ *========================
+
+/* hero slider style start
+
+.hero-slider
+  .swiper-pagination
+    bottom: 10px
+    left: 0
+    width: 100%
+    margin-bottom: 1.25rem
+
+  .swiper-pagination-bullet
     position: relative
-    background: none
-    width: 53px;
-    height: 56px;
-    left: auto
-    right: 0
-    margin-top: 0
-  display: -webkit-box
-  display: -ms-flexbox
-  display: flex
-  -webkit-box-align: center
-      -ms-flex-align: center
-          align-items: center
-  -webkit-box-pack: center
-      -ms-flex-pack: center
-          justify-content: center
-  background-color: var(--primary)
-  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px
-          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px
+    height: 1.25rem
+    width: 1.25rem
+    border-width: 1px
+    border-style: solid
+    --tw-border-opacity:1
+    border-color: rgb(252 101 (57 / var(--tw-border-opacity)))
+    background-color: transparent
+    opacity: 1
+    margin: 0 4px
 
-    ion-icon
-      font-size: 1.4rem
-      color: var(--primary)
+    &::before
+      position: absolute
+      top: 0.25rem
+      right: 0.25rem
+      bottom: 0.25rem
+      left: 0.25rem
+      z-index: 10
+      border-radius: 9999px
+      border-width: 1px
+      border-style: solid
+      --tw-border-opacity:1
+      border-color: rgb(252 101 (57 / var(--tw-border-opacity)))
+      content: ""
 
-  .swiper-button-prev
-    margin-right: 20px
+  .swiper-pagination-bullet-active::before
+    --tw-bg-opacity:1
+    background-color: rgb(252 101 (57 / var(--tw-bg-opacity)))
 
-.gallery
-  .swiper-button-next, .swiper-button-prev
-    background-image: none
+  .swiper-slide
+    padding-left: 1rem
+    padding-right: 1rem
+    padding-top: 5rem
+    padding-bottom: 5rem
+    background-color: #faf1ef
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+            align-items: center;
 
-.slider-navigation
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  z-index: 1;
+  .swiper-slide-active
+    .hero-slider-content > *
+      -webkit-animation: fadeInLeft 1.3s ease-in-out
+      animation: fadeInLeft 1.3s ease-in-out
+
+    img
+      -webkit-animation: fadeInRight 1.3s ease-in-out
+      animation: fadeInRight 1.3s ease-in-out
+      transition-delay: 1000ms
+
+@-webkit-keyframes fadeInLeft
+  0%
+    opacity: 0
+    transform: translate3d(-100px, 0, 0)
+
+  to
+    opacity: 1
+    transform: none
+
+@keyframes fadeInLeft
+  0%
+    opacity: 0
+    transform: translate3d(-100px, 0, 0)
+
+  to
+    opacity: 1
+    transform: none
+
+@-webkit-keyframes fadeInRight
+  0%
+    opacity: 0
+    transform: translate3d(100px, 0, 0)
+
+  to
+    opacity: 1
+    transform: none
+
+@keyframes fadeInRight
+  0%
+    opacity: 0
+    transform: translate3d(100px, 0, 0)
+
+  to
+    opacity: 1
+    transform: none
+
+.hero-slider-row
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
+  -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 29px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%
 
-.slider-navigation 
-  .slider-arrow:hover 
-    background-color: var(--primaryLight);
+.hero-slider-tag
+  font-size: 24px
+  color: #fc6539
+  font-weight: 400
+  display: block
+  margin-bottom: 0.75rem
 
+.hero-slider-title
+  color: #06264b
+  font-weight: 700
+  font-family: Playfair Display, serif
+  margin-bottom: 1.25rem
+  font-size: 1.875rem
+  line-height: 2.25rem
+
+.hero-slider-subtitle
+  line-height: 2
+  color: #06264b
+  font-weight: 400
+  font-family: Poppins, serif
+  font-size: 14px
+
+.hero-slider-action
+  display: inline-block
+  margin-top: 2rem
+
+.hero-slider-btn
+  color: #fc6539
+  background-color: #06264b
+  border-radius: 9999px
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500
+  text-transform: capitalize
+  line-height: 1.5
+  padding-top: 0.75rem
+  padding-bottom: 0.75rem
+  padding-left: 0.75rem
+  padding-right: 0.75rem
+  column-gap: 0.75rem
+
+.hero-slider-img
+  margin-top: 2.5rem
+
+  img
+    margin-left: auto
+    margin-right: auto
+
+/* hero slider style end
